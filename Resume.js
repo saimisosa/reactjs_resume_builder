@@ -3,7 +3,6 @@ import ErrorPage from "./ErrorPage";
 import { useReactToPrint } from "react-to-print";
 const Resume = ({ result }) => {
     const componentRef = useRef();
-    //function that replaces the new line with a break tag
 
     const handlePrint = useReactToPrint({
         content: () => componentRef.current,
@@ -15,7 +14,6 @@ const Resume = ({ result }) => {
         return string.replace(/\n/g, "<br />");
     };
 
-    //returns an error page if the result object is empty
     if (JSON.stringify(result) === "{}") {
         return <ErrorPage />;
     }
