@@ -6,7 +6,7 @@ import App from './App';
 const { Configuration, OpenAIApi } = require("openai");
 
 export const configuration = new Configuration({
-    apiKey: "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",
+    apiKey: "SECRET_KEY",
 });
 delete configuration.baseOptions.headers['User-Agent'];
 export const openai = new OpenAIApi(configuration);
@@ -29,9 +29,3 @@ root.render(
     <App />
   </React.StrictMode>
 );
-
-// api secret key = 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
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
